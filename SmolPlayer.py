@@ -7,12 +7,16 @@ import threading
 import time
 import codecs
 import sys
+import os
 from random import shuffle
 from os import chdir, getcwd
 from vlc import Instance, State
 from tkinter import messagebox
 from requests import get
 from bs4 import BeautifulSoup
+
+os.add_dll_directory(r'C:\Program Files\VideoLAN\VLC')#fix vlc error on python 3.8.*
+#change the directory to vlc directory
 
 class SmolPlayer():
     def __init__(self):
